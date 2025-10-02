@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  return (
+  return ( 
     <>
       <nav className="bg-white flex items-center justify-between ">
         <div className="-mt-4 ml-8 -mb-1">
