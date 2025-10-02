@@ -37,41 +37,42 @@ const Navbar = () => {
             CONTACT
           </a>
         </div>
-        <div>
+        <div className="flex items-center gap-2">
           <button
             onClick={() => setOpen(true)}
-            className="bg-[#ABA48D] pt-2.5 pb-2.5 px-6 rounded-2xl"
+            className="bg-[#ABA48D] pt-2.5 pb-2.5 px-6  text-white rounded-2xl hover:bg-gray-100 hover:text-black "
           >
             LOGIN
           </button>
-        </div>
-        {open && (
-          <div className="fixed inset-0 flex items-center justify-center bg-black/50">
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h2 className="text-lg font-bold">Login Form</h2>
-              <input
-                type="text"
-                placeholder="Username"
-                className="border p-2 w-full mt-2"
-              />
-              <input
-                type="password"
-                placeholder="Password"
-                className="border p-2 w-full mt-2"
-              />
-              <button
-                onClick={() => setOpen(false)}
-                className="mt-4 px-4 py-2 bg-gray-600 text-white rounded"
-              >
-                Close
-              </button>
+
+          {open && (
+            <div className="fixed inset-0 flex items-center justify-center bg-black/50">
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h2 className="text-lg font-bold">Login Form</h2>
+                <input
+                  type="text"
+                  placeholder="Username"
+                  className="border p-2 w-full mt-2"
+                />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  className="border p-2 w-full mt-2"
+                />
+                <button
+                  onClick={() => setOpen(false)}
+                  className="mt-4 px-4 py-2 bg-gray-600 text-white rounded"
+                >
+                  Close
+                </button>
+              </div>
             </div>
+          )}
+          <div className="flex space-x-[2px]">
+            <Globe size={24} color="#696969"></Globe>
           </div>
-        )}
-        <div className="flex items-center gap-1">
-          <Globe size={24} color="#696969"></Globe>
           <span className="text-[#696969] text-xl">EN</span>
-          <div className="mr-8 ml-6.5">
+          <div className="mr-8">
             <ToggleRight
               style={{ width: 50, height: 29, color: "#696969" }}
             ></ToggleRight>
